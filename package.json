@@ -1,0 +1,21 @@
+{
+  "name": "yan-ws",
+  "private": true,
+  "scripts": {
+    "start": "bun --bun run server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/express": "^5.0.3",
+    "@types/express-ws": "^3.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hocuspocus/extension-database": "^3.2.5",
+    "@hocuspocus/server": "^3.2.5",
+    "express": "^5.1.0",
+    "express-ws": "^5.0.2"
+  }
+}
