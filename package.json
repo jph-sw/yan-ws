@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@hocuspocus/extension-database": "^3.2.5",
+    "@hocuspocus/extension-sqlite": "^3.2.5",
     "@hocuspocus/server": "^3.2.5",
     "express": "^5.1.0",
     "express-ws": "^5.0.2"
