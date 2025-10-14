@@ -12,9 +12,17 @@ const hocuspocus = new Hocuspocus({
         );
         const data = (await res.json()) as any;
 
-        return new Promise((resolve) => {
-          resolve(data.doc.data as any);
-        });
+        console.log("API Response:", JSON.stringify(data, null, 2));
+
+        if (!data || typeof data.doc !== "string") {
+          throw new Error(
+            `Invalid document data structure received from API: ${JSON.stringify(data)}`,
+          );
+        }
+
+        const binaryData = Buffer.from(data.doc, "base64");
+
+        return binaryData;
       },
       store: async ({ documentName, state }) => {
         const res = await fetch(
