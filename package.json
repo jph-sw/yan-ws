@@ -2,7 +2,8 @@
   "name": "yan-ws",
   "private": true,
   "scripts": {
-    "start": "bun --bun run server.ts"
+    "start": "bun --bun run server.ts",
+    "build": "bun build server.ts --outdir ./dist --target bun"
   },
   "devDependencies": {
     "@types/bun": "latest",
