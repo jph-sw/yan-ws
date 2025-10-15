@@ -31,6 +31,10 @@ COPY --from=install /temp/prod/node_modules node_modules
 COPY --from=prerelease /usr/src/app/server.ts .
 COPY --from=prerelease /usr/src/app/package.json .
 
+RUN chown -R bun:bun /usr/src && \
+    chmod -R 755 /usr/src
+
+
 # run the app
 USER bun
 EXPOSE 3000/tcp
